@@ -13,10 +13,9 @@ function Login() {
   const { login } = useAuth();
 
   useEffect(() => {
-    // Display splash screen for 10 seconds
     const timer = setTimeout(() => {
       setShowSplash(false);
-    }, 10000);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -81,7 +80,7 @@ function Login() {
         
         {/* Company name */}
         <div className="relative z-10 text-center">
-          <h1 className="text-6xl font-bold text-cyan-500 tracking-wider">BRANDSMASHERS TECH</h1>
+          <h1 className="text-2xl md:text-5xl lg:text-6xl md font-bold text-cyan-500 tracking-wider">BRANDSMASHERS TECH</h1>
           <div className="mt-4 h-1 w-48 bg-cyan-500 mx-auto"></div>
         </div>
       </div>

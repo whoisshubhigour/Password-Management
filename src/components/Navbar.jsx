@@ -1,5 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { User } from 'lucide-react'; // Import the User icon from lucide-react
 
 function Navbar() {
   const { user, logout } = useAuth();
@@ -22,8 +23,16 @@ function Navbar() {
           <div>
             {user ? (
               <div className="flex items-center space-x-4">
-                <span className="text-white font-medium">{user.name}</span>
-                
+                <div className="flex items-center space-x-2">
+                  <User className="text-white h-5 w-5" />
+                  <span className="text-white font-medium">{user.name}</span>
+                </div>
+                <button
+                  onClick={handleLogout}
+                  className="text-white border border-yellow-600 px-4 py-2 rounded-lg hover:bg-yellow-600 hover:text-white transition duration-300"
+                >
+                  Logout
+                </button>
               </div>
             ) : (
               <div className="flex space-x-4">

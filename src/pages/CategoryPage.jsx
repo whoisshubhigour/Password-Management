@@ -195,14 +195,14 @@ function CategoryPage() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="group">
                   <label className="block text-sm font-medium text-gray-300 mb-1">
-                    Platform Name
+                    Category
                   </label>
                   <input
                     type="text"
                     value={newEntry.platformName}
                     onChange={(e) => setNewEntry({ ...newEntry, platformName: e.target.value })}
                     className="w-full px-3 py-2 rounded border border-gray-600 bg-gray-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
-                    placeholder="e.g. Gmail, Facebook"
+                    
                     required
                   />
                 </div>
@@ -277,7 +277,7 @@ function CategoryPage() {
                     <table className="min-w-full divide-y divide-gray-700">
                       <thead>
                         <tr>
-                          <th className="px-2 py-3 text-left text-xs font-bold text-gray-400 uppercase tracking-wider whitespace-nowrap">Platform</th>
+                          <th className="px-2 py-3 text-left text-xs font-bold text-gray-400 uppercase tracking-wider whitespace-nowrap">Category</th>
                           <th className="px-2 py-3 text-left text-xs font-bold text-gray-400 uppercase tracking-wider whitespace-nowrap">Username/Email</th>
                           <th className="px-2 py-3 text-left text-xs font-bold text-gray-400 uppercase tracking-wider whitespace-nowrap">Password</th>
                           <th className="px-2 py-3 text-left text-xs font-bold text-gray-400 uppercase tracking-wider whitespace-nowrap">Actions</th>

@@ -3,16 +3,12 @@ import { useAuth } from '../context/AuthContext';
 import { useState } from 'react';
 
 function Dashboard() {
-  const { user, logout } = useAuth();
+  const { user } = useAuth();
   const navigate = useNavigate();
   const [hoveredCategory, setHoveredCategory] = useState(null);
 
   
-  const handleLogout = () => {
-    logout();
-    navigate('/login');
-  };
-
+ 
   const categories = [
     {
       id: 'mails',
@@ -103,18 +99,7 @@ function Dashboard() {
       <div className="absolute inset-0 bg-locker-grid opacity-30 z-0"></div>
       
       <div className="relative z-10 max-w-6xl mx-auto">
-        {/* Header with Logout Button */}
-        <div className="flex justify-end mb-6">
-          <button
-            onClick={handleLogout}
-            className="mt-[3rem] bg-yellow-600 hover:bg-yellow-500 text-white px-4 py-2 rounded-lg shadow-md transition duration-300 flex items-center"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-            </svg>
-            Logout
-          </button>
-        </div>
+        
         
         {/* Welcome Section */}
         <div className="text-center mb-12">
